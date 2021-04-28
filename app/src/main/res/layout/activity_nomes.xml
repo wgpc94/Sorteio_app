@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityNomes"
+    android:background="@color/blue">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sorteio_numeros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="Sorteio de Números"
+        app:titleTextColor="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_sortear"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lista_nomes"
+                android:text="Lista de Nomes"
+                android:textSize="18dp"
+                android:textColor="@color/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/adicionar_Edt"
+                android:hint="Digite um nome :"
+                android:textColorHint="@color/white"
+                android:paddingStart="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/purple"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/lista_nomes"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/blue"
+                android:layout_width="180dp"
+                android:layout_height="40dp"/>
+
+            <Button
+                android:text="Adicionar"
+                android:background="@color/purple"
+                app:layout_constraintTop_toBottomOf="@+id/lista_nomes"
+                app:layout_constraintStart_toEndOf="@+id/adicionar_Edt"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:text="Sortear quantos nomes?"
+                android:textSize="18dp"
+                android:id="@+id/quantos_nomesTv"
+                app:layout_constraintTop_toBottomOf="@+id/adicionar_Edt"
+                app:layout_constraintStart_toStartOf="@+id/adicionar_Edt"
+                android:textColor="@color/purple"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/quantos_nomesEdt"
+                app:layout_constraintTop_toBottomOf="@id/adicionar_Edt"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/quantos_nomesTv"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quantos_nomesEdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:text="Pode Sortear o mesmo nome ?"
+                    android:textSize="16dp"
+                    android:textColor="@color/blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mesmo_numero">Pode sortear o mesmo numero mais de uma ves?</string>
     <string name="memos_numero">PODE SORTEAR O MEMOS NUMERO?</string>
+    <string name="o_que_gostaria_de_sortear">O que gostaria de sortear?</string>
 </resources>
