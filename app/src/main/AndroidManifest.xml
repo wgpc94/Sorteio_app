@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sorteio_app">
-        <activity android:name=".ActivityNomes"></activity>
+        <activity android:name=".item_activity"></activity>
+        <activity
+            android:name=".ActivityNomes"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SorteioNumeros"
             android:parentActivityName=".MainActivity" />

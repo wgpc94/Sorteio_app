@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         nomesCoisas.setOnClickListener{
-            Toast.makeText(this,"click nomes ou coisas",Toast.LENGTH_LONG).show()
+            val intent = Intent(this,ActivityNomes::class.java)
+            startActivity(intent)
         }
     }
 

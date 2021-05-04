@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".SorteioNumeros"
     android:background="@color/blue"
-    android:padding="2dp"
+    android:padding="5dp"
     android:id="@+id/sorteio_numeros_layout">
 
     <androidx.appcompat.widget.Toolbar
@@ -22,6 +22,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+    <TextView
+        android:id="@+id/resultado_numeros"
+        android:text="Resultado numeros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+    <Button
+        android:id="@+id/button_continuar_numeros"
+        android:text="Continiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resultado_numeros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_sorteios_Numeros"
@@ -31,7 +52,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button_sortear"
+        app:layout_constraintBottom_toTopOf="@+id/button_sortear_numeros"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -147,7 +168,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button_sortear"
+        android:id="@+id/button_sortear_numeros"
         android:text="Sortear"
         android:textSize="20sp"
         android:textColor="@color/purple"
@@ -158,6 +179,7 @@
         android:layout_marginBottom="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
