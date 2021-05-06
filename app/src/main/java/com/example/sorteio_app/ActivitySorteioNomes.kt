@@ -113,15 +113,16 @@ class ActivityNomes : AppCompatActivity() {
         if (mesmoNomeCb.isChecked) {
             resultadoTv.text = lista.random().nome
         } else {
-            val arrayResultados = mutableListOf<String>()
-            val resultadoAAdicionar = lista.random().nome
-            if (!arrayResultados.contains(resultadoAAdicionar)) {
-                resultadoTv.text = resultadoAAdicionar
-            }
+            val resultado = lista.random().nome
+            resultadoTv.text = resultado
+            lista.remove(resultado)
+            adapter.deleteElement(Model(resultado))
         }
         sorteioNomes++
         if (sorteioNomes == quantidadeEdt.text.toString().toInt()){
             continuarSorteioBtn.visibility = View.GONE
+            lista.clear()
+            sorteioNomes = 0
         }
     }
 

@@ -31,6 +31,10 @@ class Adapter(
         var aN = ActivityNomes()
         aN.setButonSortear()
     }
+    fun deleteElement(element : Model){
+        lista.remove(element)
+        notifyDataSetChanged()
+    }
 
     override fun getItemCount(): Int {
         return lista.size
